@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #77815C; /* 딥세이지 배경 */
+            background-color: #AC8E8E; /* 더스티 로즈 배경 */
             font-family: 'Nanum Myeongjo', serif;
             margin: 0;
             padding: 20px 10px;
@@ -18,10 +18,10 @@
         .container {
             max-width: 450px;
             width: 100%;
-            background-color: #fff; /* 컨텐츠 영역은 흰색 */
-            border-radius: 30px; /* 전체 모서리 둥글게 */
+            background-color: #fff;
+            border-radius: 30px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             text-align: center;
             color: #333;
         }
@@ -31,31 +31,33 @@
             position: relative;
             width: 100%;
             height: 550px; 
-            background-image: url('main.JPG'); /* 사진 파일명 대소문자 확인! */
+            background-image: url('main.JPG'); 
             background-size: cover;
             background-position: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            /* 요청 사항: 글자 검은색, 굵게, 그림자 */
-            color: #000; /* 검은색 */
-            font-weight: bold; /* 굵게 */
-            text-shadow: 2px 2px 4px rgba(255,255,255,0.8); /* 흰색 그림자로 글자 띄우기 */
+            color: #000;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.8);
         }
         .main-header h1 { font-size: 1.8rem; margin: 0; font-weight: bold; letter-spacing: 2px; }
         .main-header .invite-text { font-size: 0.9rem; margin: 15px 0; letter-spacing: 3px; font-weight: bold; }
         .main-header .date-location { font-size: 1.1rem; line-height: 1.6; font-weight: bold; }
-        .main-header .heart { color: #ff4d4d; margin-bottom: 5px; font-weight: bold; }
+        .main-header .heart { color: #AC8E8E; margin-bottom: 5px; font-weight: bold; }
 
         .content { padding: 40px 20px; }
         .section { margin-bottom: 50px; }
-        .section-title { font-weight: bold; font-size: 1.1rem; color: #556B2F; margin-bottom: 20px; border-bottom: 1px solid #eee; display: inline-block; padding-bottom: 5px; }
         
+        /* 섹션 타이틀 색상 변경 */
+        .section-title { font-weight: bold; font-size: 1.1rem; color: #AC8E8E; margin-bottom: 20px; border-bottom: 1px solid #f2eeee; display: inline-block; padding-bottom: 5px; }
+        
+        /* 버튼 스타일 더스티 로즈로 변경 */
         .btn {
-            background: #fdfdfd;
-            border: 1px solid #556B2F;
-            color: #556B2F;
+            background: #fff;
+            border: 1px solid #AC8E8E;
+            color: #AC8E8E;
             padding: 10px 20px;
             text-decoration: none;
             display: inline-block;
@@ -63,9 +65,17 @@
             border-radius: 8px;
             cursor: pointer;
             font-size: 0.85rem;
+            transition: all 0.3s;
         }
-        .account-box { display: none; background: #f9f9f9; padding: 15px; margin-top: 10px; border-radius: 10px; font-size: 0.9rem; text-align: left; }
-        .copy-btn { font-size: 0.7rem; background: #556B2F; color: #fff; border: none; padding: 3px 8px; border-radius: 4px; cursor: pointer; float: right; }
+        .btn:active {
+            background: #AC8E8E;
+            color: #fff;
+        }
+
+        .account-box { display: none; background: #faf8f8; padding: 15px; margin-top: 10px; border-radius: 10px; font-size: 0.9rem; text-align: left; border-left: 3px solid #AC8E8E; }
+        
+        /* 복사 버튼 색상 변경 */
+        .copy-btn { font-size: 0.7rem; background: #AC8E8E; color: #fff; border: none; padding: 3px 8px; border-radius: 4px; cursor: pointer; float: right; }
         
         /* 지도 영역 */
         .map-thumb { width: 100%; height: 200px; background-color: #f0f0f0; border-radius: 10px; overflow: hidden; position: relative; margin-top: 10px; }
@@ -103,10 +113,10 @@
             <p><strong>Oreg-Tolgy Kastely Fogado</strong><br>
             <span style="font-size: 0.9rem;">Pusztazámor, Kossuth Lajos u. 22, 2039</span></p>
             
-            <a href="https://maps.app.goo.gl/B9p6pGjS5W2M8f8G9" target="_blank">
+            <a href="https://maps.app.goo.gl/YourActualGoogleMapLink" target="_blank">
                 <div class="map-thumb">
                     <img src="map.png" alt="지도 보기">
-                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.5); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(172, 142, 142, 0.8); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem;">
                         구글 지도 보기
                     </div>
                 </div>
@@ -131,9 +141,9 @@
                     국민은행 203-21-1417-596
                     <button class="copy-btn" onclick="copyAccount('203-21-1417-596')">복사</button>
                 </div>
-                <div>
+                <div style="border-top: 1px dashed #eee; padding-top: 10px;">
                     <strong>신부 아버지 조규백</strong><br>
-                    국민은행 920301-01-3233963
+                    국민은행 920301-01-323393
                     <button class="copy-btn" onclick="copyAccount('920301-01-3233963')">복사</button>
                 </div>
             </div>
