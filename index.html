@@ -38,13 +38,15 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: #fff;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            /* 요청 사항: 글자 검은색, 굵게, 그림자 */
+            color: #000; /* 검은색 */
+            font-weight: bold; /* 굵게 */
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.8); /* 흰색 그림자로 글자 띄우기 */
         }
-        .main-header h1 { font-size: 1.7rem; margin: 0; font-weight: normal; letter-spacing: 2px; }
-        .main-header .invite-text { font-size: 0.8rem; margin: 15px 0; letter-spacing: 3px; }
-        .main-header .date-location { font-size: 1rem; line-height: 1.6; }
-        .main-header .heart { color: #ff4d4d; margin-bottom: 5px; }
+        .main-header h1 { font-size: 1.8rem; margin: 0; font-weight: bold; letter-spacing: 2px; }
+        .main-header .invite-text { font-size: 0.9rem; margin: 15px 0; letter-spacing: 3px; font-weight: bold; }
+        .main-header .date-location { font-size: 1.1rem; line-height: 1.6; font-weight: bold; }
+        .main-header .heart { color: #ff4d4d; margin-bottom: 5px; font-weight: bold; }
 
         .content { padding: 40px 20px; }
         .section { margin-bottom: 50px; }
@@ -101,7 +103,7 @@
             <p><strong>Oreg-Tolgy Kastely Fogado</strong><br>
             <span style="font-size: 0.9rem;">Pusztazámor, Kossuth Lajos u. 22, 2039</span></p>
             
-            <a href="https://www.google.com/maps/place/Old+Oak+Tavern+Castle/@47.4046616,18.7875978,17z/data=!3m1!4b1!4m6!3m5!1s0x476a0a2bd56c1f8d:0x1ec93246de1d170a!8m2!3d47.4046616!4d18.7875978!16s%2Fg%2F11b7fvpn05?entry=ttu&g_ep=EgoyMDI2MDQyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+            <a href="https://maps.app.goo.gl/B9p6pGjS5W2M8f8G9" target="_blank">
                 <div class="map-thumb">
                     <img src="map.png" alt="지도 보기">
                     <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.5); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem;">
