@@ -46,7 +46,7 @@
 <body>
 
 <div class="container">
-    <img src="main.jpg" alt="우리 사진" class="main-img">
+    <img src="main.JPG" alt="우리 사진" class="main-img">
 
     <div class="section">
         <h1>서영 & 도메니코</h1>
@@ -59,7 +59,7 @@
         
         <a href="https://www.google.com/maps/place/Old+Oak+Tavern+Castle/@47.4046616,18.7875978,17z/data=!3m1!4b1!4m6!3m5!1s0x476a0a2bd56c1f8d:0x1ec93246de1d170a!8m2!3d47.4046616!4d18.7875978!16s%2Fg%2F11b7fvpn05?entry=ttu&g_ep=EgoyMDI2MDQyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
             <div style="width: 100%; height: 200px; background-color: #f0f0f0; border-radius: 10px; overflow: hidden; position: relative;">
-                <img src="map.jpg" alt="지도 보기" style="width:100%; height:100%; object-fit:cover;">
+                <img src="map.png" alt="지도 보기" style="width:100%; height:100%; object-fit:cover;">
                 <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.5); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem;">
                     지도 크게보기
                 </div>
