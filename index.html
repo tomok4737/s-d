@@ -8,125 +8,152 @@
     <style>
         body {
             background-color: #556B2F; /* 올리브색 배경 */
-            color: #FFFFFF; /* 글자 흰색 */
-            font-family: 'Nanum Myeongjo', serif; /* 셰리프 폰트 */
+            font-family: 'Nanum Myeongjo', serif;
             margin: 0;
-            padding: 0;
-            text-align: center;
+            padding: 20px 10px;
+            display: flex;
+            justify-content: center;
             line-height: 1.8;
         }
-        .container { max-width: 500px; margin: auto; padding: 40px 20px; }
-        
-        /* 대문 사진 */
-        .main-img { width: 100%; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-        
-        h1 { font-size: 1.8rem; margin-bottom: 10px; }
-        .date-location { font-size: 1.1rem; margin-bottom: 50px; opacity: 0.9; }
-        
-        .section { margin-bottom: 60px; }
-        .section-title { font-weight: bold; font-size: 1.2rem; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.3); display: inline-block; padding-bottom: 5px; }
-        
-        /* 버튼 및 계좌번호 스타일 */
-        .btn {
-            background: rgba(255,255,255,0.1);
-            border: 1px solid #fff;
+        .container {
+            max-width: 450px;
+            width: 100%;
+            background-color: #fff; /* 컨텐츠 영역은 흰색 */
+            border-radius: 30px; /* 전체 모서리 둥글게 */
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            text-align: center;
+            color: #333;
+        }
+
+        /* 사진 위 텍스트 영역 */
+        .main-header {
+            position: relative;
+            width: 100%;
+            height: 550px; 
+            background-image: url('main.JPG'); /* 사진 파일명 대소문자 확인! */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             color: #fff;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        .main-header h1 { font-size: 1.7rem; margin: 0; font-weight: normal; letter-spacing: 2px; }
+        .main-header .invite-text { font-size: 0.8rem; margin: 15px 0; letter-spacing: 3px; }
+        .main-header .date-location { font-size: 1rem; line-height: 1.6; }
+        .main-header .heart { color: #ff4d4d; margin-bottom: 5px; }
+
+        .content { padding: 40px 20px; }
+        .section { margin-bottom: 50px; }
+        .section-title { font-weight: bold; font-size: 1.1rem; color: #556B2F; margin-bottom: 20px; border-bottom: 1px solid #eee; display: inline-block; padding-bottom: 5px; }
+        
+        .btn {
+            background: #fdfdfd;
+            border: 1px solid #556B2F;
+            color: #556B2F;
             padding: 10px 20px;
             text-decoration: none;
             display: inline-block;
             margin: 5px;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
-        .account-box { display: none; background: rgba(0,0,0,0.1); padding: 15px; margin-top: 10px; border-radius: 5px; }
-        .copy-btn { font-size: 0.8rem; background: #fff; color: #6B8E23; border: none; padding: 2px 8px; border-radius: 3px; cursor: pointer; margin-left: 10px; }
+        .account-box { display: none; background: #f9f9f9; padding: 15px; margin-top: 10px; border-radius: 10px; font-size: 0.9rem; text-align: left; }
+        .copy-btn { font-size: 0.7rem; background: #556B2F; color: #fff; border: none; padding: 3px 8px; border-radius: 4px; cursor: pointer; float: right; }
+        
+        /* 지도 영역 */
+        .map-thumb { width: 100%; height: 200px; background-color: #f0f0f0; border-radius: 10px; overflow: hidden; position: relative; margin-top: 10px; }
+        .map-thumb img { width:100%; height:100%; object-fit:cover; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <img src="main.JPG" alt="우리 사진" class="main-img">
-
-    <div class="section">
-        <h1>서영 & 도메니코</h1>
-        <p class="date-location">2026년 5월 30일 토요일 오후 4시<br>헝가리 Oreg-Tolgy Kastely Fogado</p>
+    <div class="main-header">
+        <h1>SEOYOUNG & DOMENICO</h1>
+        <p class="invite-text">| WE INVITE YOU TO OUR WEDDING |</p>
+        <div class="heart">❤️ 2026.05.30 ❤️</div>
+        <p class="date-location">
+            토요일 오후 4시<br>
+            헝가리 Oreg-Tolgy Kastely Fogado
+        </p>
     </div>
- <div class="section">
-        <p>서로 다른 색으로 살아온 저희 두 사람이<br>
-        이제 하나의 색으로 물들어 가려 합니다.<br>
-        사랑스런 마음으로 저희의 첫걸음을<br>
-        함께 축복해 주시면 감사하겠습니다.</p>
-        <div style="margin-top: 40px; font-size: 1.05rem; letter-spacing: 1px;">
-            <p>
-                <span style="font-size: 0.9rem; opacity: 0.8;">임서연 · 조규백</span> 의 장녀 <strong style="font-size: 1.1rem;">조서영</strong>
-                <br>
-                <span style="font-size: 0.9rem; opacity: 0.8;">올쇼야 · 실비오</span> 의 장남 <strong style="font-size: 1.1rem;">도메니코</strong>
-            </p>
+
+    <div class="content">
+        <div class="section">
+            <p>서로 다른 색으로 살아온 저희 두 사람이<br>
+            이제 하나의 색으로 물들어 가려 합니다.<br>
+            사랑스런 마음으로 저희의 첫걸음을<br>
+            함께 축복해 주시면 감사하겠습니다.</p>
+            
+            <div style="margin-top: 40px; font-size: 1rem;">
+                <p>임서연 · 조규백 <span style="font-size: 0.8rem; opacity: 0.7;">의 장녀</span> <strong>조서영</strong></p>
+                <p>올쇼야 · 실비오 <span style="font-size: 0.8rem; opacity: 0.7;">의 장남</span> <strong>도메니코</strong></p>
+            </div>
         </div>
-    </div>
 
-    <div class="section">
-        <div class="section-title">오시는 길</div><br>
-        <p><strong>Oreg-Tolgy Kastely Fogado</strong><br>Pusztazámor, Kossuth Lajos u. 22, 2039</p>
-        
-        <a href="https://www.google.com/maps/place/Old+Oak+Tavern+Castle/@47.4046616,18.7875978,17z/data=!3m1!4b1!4m6!3m5!1s0x476a0a2bd56c1f8d:0x1ec93246de1d170a!8m2!3d47.4046616!4d18.7875978!16s%2Fg%2F11b7fvpn05?entry=ttu&g_ep=EgoyMDI2MDQyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
-            <div style="width: 100%; height: 200px; background-color: #f0f0f0; border-radius: 10px; overflow: hidden; position: relative;">
-                <img src="map.png" alt="지도 보기" style="width:100%; height:100%; object-fit:cover;">
-                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.5); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem;">
-                    지도 크게보기
+        <div class="section">
+            <span class="section-title">오시는 길</span><br>
+            <p><strong>Oreg-Tolgy Kastely Fogado</strong><br>
+            <span style="font-size: 0.9rem;">Pusztazámor, Kossuth Lajos u. 22, 2039</span></p>
+            
+            <a href="https://maps.app.goo.gl/B9p6pGjS5W2M8f8G9" target="_blank">
+                <div class="map-thumb">
+                    <img src="map.png" alt="지도 보기">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.5); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem;">
+                        구글 지도 보기
+                    </div>
+                </div>
+            </a>
+            <p style="font-size: 0.75rem; margin-top: 10px; color: #888;">지도를 클릭하면 구글 맵으로 연결됩니다.</p>
+        </div>
+
+        <div class="section">
+            <span class="section-title">연락하실 곳</span><br>
+            <p style="font-size: 0.9rem;">임서연 신부 어머니: 010-5008-0532</p>
+            <p style="font-size: 0.9rem;">조규백 신부 아버지: 010-5345-5033</p>
+            <a href="tel:01050080532" class="btn">신부 어머니 전화</a>
+            <a href="tel:01053455033" class="btn">신부 아버지 전화</a>
+        </div>
+
+        <div class="section">
+            <span class="section-title">마음 전하실 곳</span><br>
+            <div class="btn" onclick="toggleAccount()">계좌번호 보기</div>
+            <div id="account-area" class="account-box">
+                <div style="margin-bottom: 15px;">
+                    <strong>신부 어머니 임서연</strong><br>
+                    국민은행 203-21-1417-596
+                    <button class="copy-btn" onclick="copyAccount('203-21-1417-596')">복사</button>
+                </div>
+                <div>
+                    <strong>신부 아버지 조규백</strong><br>
+                    국민은행 920301-01-3233963
+                    <button class="copy-btn" onclick="copyAccount('920301-01-3233963')">복사</button>
                 </div>
             </div>
-        </a>
-        <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.8;">위 이미지를 클릭하면 길찾기로 연결됩니다.</p>
-    </div>
-
-   
-    <div class="section">
-        <div class="section-title">연락하실 곳</div><br>
-        <p>임서연 신부 어머니: 010-5008-0532 </p>
-        <p>조규백 신부 아버지: 010-5345-5033 </p>
-        <a href="tel:01050080532" class="btn">신부 어머니에게 전화</a>
-        <a href="tel:01053455033" class="btn">신부 아버지에게 전화</a>
-    </div>
-
-    <div class="section">
-        <div class="section-title">마음 전하실 곳</div><br>
-        <div class="btn" onclick="toggleAccount()">계좌번호 보기</div>
-        <div id="account-area" class="account-box">
-          <p>임서연 신부 어머니 </p>
-            <p>국민은행 203-21-1417-596<br>(예금주: 임서연) 
-                <button class="copy-btn" onclick="copyAccount('203-21-1417-596')">복사</button>
-            </p>
-            <p>조규백 신부 아버지 </p>
-            <p>국민은행 920301-01-3233963<br>(예금주: 조서영) 
-                <button class="copy-btn" onclick="copyAccount('920301-01-323393')">복사</button>
-            </p>
         </div>
-    </div>
 
-    <div class="section">
-        <p style="font-size: 0.9rem; opacity: 0.8;">감사합니다. 예쁘게 잘 살겠습니다.</p>
+        <div class="section">
+            <p style="font-size: 0.9rem; opacity: 0.6;">감사합니다. 예쁘게 잘 살겠습니다.</p>
+        </div>
     </div>
 </div>
 
 <script>
-    // 계좌번호 보이기/숨기기
     function toggleAccount() {
         var x = document.getElementById("account-area");
-        if (x.style.display === "block") {
-            x.style.display = "none";
-        } else {
-            x.style.display = "block";
-        }
+        x.style.display = (x.style.display === "block") ? "none" : "block";
     }
 
-    // 계좌번호 복사하기
     function copyAccount(text) {
         navigator.clipboard.writeText(text).then(function() {
-            alert("계좌번호가 복사되었습니다: " + text);
-        }, function(err) {
-            alert("복사 실패했어요 ㅠㅠ");
+            alert("계좌번호가 복사되었습니다.");
+        }, function() {
+            alert("복사 실패했어요.");
         });
     }
 </script>
